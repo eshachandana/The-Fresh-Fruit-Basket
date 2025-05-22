@@ -1,0 +1,95 @@
+/* Basic reset and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Container that centers content and limits max width */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Responsive header/nav example */
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #333;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    display: block;
+  }
+  
+  nav a:hover {
+    background-color: #575757;
+  }
+  
+  /* Responsive images */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+  }
+  
+  /* Example content section */
+  section {
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #222;
+    color: white;
+    margin-top: 30px;
+    font-size: 0.9rem;
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    nav a {
+      padding: 10px 0;
+      border-top: 1px solid #444;
+    }
+    
+    .container {
+      width: 95%;
+      padding: 0 5px;
+    }
+  }
+  
