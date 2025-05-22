@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE FRESH FRUIT BASKET - Fresh. Fun. Fruity</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fffaf5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(to right, #ff8c00ec, #ffe259);
+      padding: 2rem 1rem;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffff0063; }
+      to { text-shadow: 0 0 20px #ff3c00f7; }
+    }
+    .animated-images {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .animated-images img {
+      width: 120px;
+      height: 120px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    nav {
+      background-color: #ffdd99;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff6600;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #ff6600;
+      text-align: center;
+    }
+    .menu-item {
+      background: #fff2e6;
+      border-radius: 15px;
+      padding: 1rem;
+      margin: 1rem 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .contact {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .whatsapp-button {
+      background-color: #25D366;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+    .whatsapp-button:hover {
+      background-color: #128C7E;
+    }
+    .qr-code {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ffe0b3;
+      font-size: 0.9rem;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    window.onload = () => showSection('home');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>THE FRESH FRUIT BASKET</h1>
+    <p>Fresh. Fun. Fruity | Made Daily with Love</p>
+    <div class="animated-images">
+      <img src="https://img.icons8.com/emoji/96/watermelon-emoji.png" alt="Watermelon" />
+      <img src="https://img.icons8.com/emoji/96/grapes-emoji.png" alt="Grapes" />
+      <img src="https://img.icons8.com/emoji/96/tangerine.png" alt="Orange" />
+      <img src="https://img.icons8.com/emoji/96/pear-emoji.png" alt="Pear" />
+      <img src="https://img.icons8.com/emoji/96/red-apple.png" alt="Apple" />
+      <img src="https://img.icons8.com/emoji/96/strawberry-emoji.png" alt="Strawberry" />
+      
+      
+    </div>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('menu')">Fruitylicious Bowl</a>
+    <a href="#" onclick="showSection('juices')">Juices & Detox Water</a>
+    <a href="#" onclick="showSection('dips')">Dip It,Drip It!</a>
+    <a href="#" onclick="showSection('plans')">Subscription Plans</a>
+    <a href="#" onclick="showSection('contact')">Contact info</a>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Welcome to The Fresh Fruit Basket </h2>
+    <p style="text-align:center;">The Fresh Fruit Basket is your one-stop destination for refreshing, nutrient-rich fruit and vegetable bowls and fresh juices. We believe in nourishing your body the natural way — with vibrant ingredients and zero compromises.</p>
+    <ul>
+      <li>✨ 100% Fresh & Organic</li>
+      <li>🍍 Handpicked seasonal fruits & veggies</li>
+      <li>💪 Boosts immunity, energy, and glow</li>
+      <li>🚚 Home delivery available</li>
+    </ul>
+    <p>
+        Optimal health begins with the careful nurturing of your body’s internal systems, starting with the gut—the core of digestion and immunity. Consuming a diverse range of fresh fruits, vegetables, nuts, and sprouts supplies a rich array of essential vitamins, minerals, fiber, and antioxidants that work synergistically to support healthy blood flow, reduce inflammation, and maintain balanced gut flora. A well-functioning gut ensures proper absorption of these nutrients, which are crucial for energy production, hormone regulation, and the repair of bodily tissues. Vitamins such as A, C, E, and minerals like zinc and selenium found abundantly in natural whole foods play vital roles in protecting cells from oxidative damage and promoting overall vitality. Integrating fresh, nutrient-dense juices and detox drinks crafted from ingredients like lemon, ginger, turmeric, and leafy greens further aids in flushing out toxins, enhancing liver function, and hydrating the body at a cellular level. <br> <br>
+
+Maintaining a balanced blood circulation system is equally essential, as blood delivers oxygen and nutrients to every organ and tissue, ensuring that the body functions optimally. Nutrient-rich foods contribute to healthy hemoglobin levels and prevent deficiencies that can lead to fatigue, weakened immunity, and poor cognitive function. Antioxidants found in berries, nuts, and leafy greens help combat free radicals, reducing oxidative stress and inflammation, which are often at the root of chronic diseases. Sprouts and nuts provide a concentrated source of plant-based protein, essential fatty acids, and fiber, all of which support cardiovascular health and aid in maintaining stable blood sugar levels. <br>  <br>
+
+This internal harmony directly impacts the skin’s health and appearance. When the body is nourished and hydrated from within, skin cells receive the hydration and nutrients needed to maintain elasticity, smoothness, and a natural glow. The antioxidants and vitamins absorbed help neutralize free radicals that accelerate aging and skin damage, while hydration supports the skin’s barrier function, preventing dryness and irritation. Regular consumption of water-rich fruits like watermelon, cucumber, and oranges complements this process by replenishing moisture and supporting skin regeneration. Additionally, healthy fats from nuts and seeds nourish the skin’s lipid barrier, enhancing softness and suppleness. <br> <br>
+
+The inclusion of detoxifying drinks, such as lemon water, ginger tea, and green smoothies, plays a crucial role in supporting liver function and accelerating the body’s natural cleansing processes. These drinks flush out harmful toxins, reduce inflammation, and promote digestive health, contributing to clearer skin and increased energy levels. Sprouts, packed with enzymes and micronutrients, assist in digestion and boost metabolism, while fiber-rich fruits and vegetables help maintain regular bowel movements and prevent bloating, further supporting gut health. <br> <br>
+
+By focusing on holistic nutrition that strengthens blood health, gut balance, and detoxification, you promote not only long-term wellness but also a vibrant, glowing complexion that reflects true vitality. This approach encourages the body to heal and rejuvenate naturally, creating a foundation for sustained health, radiant skin, and an overall sense of well-being. <br>
+    </p>
+  </section>
+
+  <section id="menu">
+    <h2>Our Picks</h2>
+    <div class="menu-item">
+      <h3>🥭  Tropical Sunshine Bowl </h3>
+      <p>Ingredients: Mango, pineapple, papaya, coconut, chia seeds </p>
+       <p> Vibe: Exotic, summer feel — rich in Vitamin C and digestion-friendly</p>
+    </div>
+    <div class="menu-item">
+      <h3>🍇  Berry Beet Bliss Bowl    </h3>
+      <p>Ingredients: Strawberry, grapes, beetroot, chia, walnuts </p>
+      <p>Vibe: Antioxidant-rich and vibrant in color </p>
+    </div>
+    <div class="menu-item">
+    <h3>🍎  Green Crunch Bowl </h3>
+    <p>Ingredients: Green apple, cucumber, broccoli, pumpkin seeds, almonds    </p>
+    <p>Vibe: Detox-friendly, fiber-loaded, and crunchy </p>
+    </div>
+   <div class="menu-item">
+    <h3>🍓 Berry Glow Bowl</h3>
+    <p>Strawberries, blueberries, banana, granola, and honey</p>
+   </div>
+   <div class="menu-item">
+   <h3>🍌  Power Banana Bowl</h3>
+   <p>Ingredients: Banana, jackfruit, dates, cashew, sesame seeds</p>
+   <p>Vibe: Energy-boosting, great for post-workout recovery</p>
+   </div>
+  <div class="menu-item">
+  <h3>🍉  Melon Mint Magic Bowl</h3>
+  <p> Ingredients: Watermelon, muskmelon, mint, sunflower seeds, pistachio</p>
+  <p> Vibe: Refreshing & hydrating — a summer favorite </p>
+  </div>
+  <div class="menu-item">
+    <h3>🍓  Red Glow Bowl </h3>
+    <p> Ingredients: Apple, pomegranate, cherry, sweet potato, flaxseeds    </p>
+    <p> Vibe: Glowing skin & iron-rich nourishment    </p> 
+    </div>
+    <div class="menu-item">
+        <h3>🥕  Roots & Fruits Bowl     </h3>
+        <p> Ingredients: Carrot, orange, banana, raisins, pumpkin seeds        </p>
+        <p>Vibe: Great for immunity and gut health — earthy and sweet        </p> 
+        </div>
+        <div class="menu-item">
+            <h3>🥦  Sprouted Power Bowl </h3>
+            <p> Ingredients: Sprouts mix (moong, chana), guava, cucumber, black grapes, makhana
+            </p>
+            <p>  Vibe: Protein-packed and crunchy with a touch of spice  </p> 
+            </div>
+
+  </section>
+
+  <section id="juices">
+    <h2>The Sip Bar</h2>
+    <div class="menu-item">
+      <h3>🍍  Tropical Green Glow    </h3>
+      <p>Ingredients: Pineapple, kale, green grapes, cucumber, and lime    </p>
+      <p>Vibe: “Island Cleanse” - exotic, juicy, and gently tangy. Feels like sipping wellness on a hammock under palm trees.    </p>
+    </div>
+    <div class="menu-item">
+      <h3> 🍓  Berry Beet Blast   </h3>
+      <p>Ingredients: Beetroot, strawberries, apple, and lemon    </p>
+      <p>Vibe: “Heart-Powered Energy” - earthy sweetness with a berry burst. Boosts blood flow and looks like a bold ruby elixir.    </p>
+    </div>
+    <div class="menu-item">
+        <h3> 🍑  Sunset Zest        </h3>
+        <p>Ingredients: Peach, orange, mango, and a hint of mint        </p>
+        <p>Vibe: “Golden Hour Vibes” - mellow, fruity, and chilled. Like a tropical sunset in a bottle, smooth and soul-soothing.        </p>
+      </div>
+      <div class="menu-item">
+        <h3> 🥭 Mango Tango Chill        </h3>
+        <p>Ingredients: Mango, coconut water, lime, and basil        </p>
+        <p>Vibe: “Tropical Dance Break” - rich and juicy with a cool herbal twist. Think mango lassi meets spa water.        </p>
+      </div>
+      <div class="menu-item">
+        <h3> 🍋  Citrus Splash </h3>
+        <p>Ingredients: Lemon, lime, orange slices, and mint        </p>
+        <p>Vibe: “Zingy Refresh” - ultra-hydrating and cleansing. Your all-day companion for a spa-like experience.        </p>
+      </div>
+      <div class="menu-item">
+        <h3> 🍓  Cool Berry Infuse        </h3>
+        <p>Ingredients: Strawberries, blueberries, cucumber, and basil        </p>
+        <p>Vibe: “Berry Calm” - sweet, mellow hydration that feels like a cool breeze on a hot day. Good for skin and soul.        </p>
+      </div>
+      <div class="menu-item">
+        <h3> 🍏  Apple Cinnamon Cleanse  </h3>
+        <p>Ingredients: Green apple slices, cinnamon sticks, and a touch of honey        </p>
+        <p>Vibe: “Warm Detox Hug” - cozy and crisp at once. Great for digestion and that gentle post-meal reset. </p>
+      </div>
+      <div class="menu-item">
+        <h3> 🥒  Cucumber Aloe Soothe        </h3>
+        <p>Ingredients: Cucumber, aloe vera pulp, mint leaves        </p>
+        <p>Vibe: “Glow from Within” - smooth, cooling, and super skin-friendly. Ideal for unwinding and rehydrating after a long day.    </p>
+      </div>
+  </section>
+
+  <section id="dips"> 
+    <h2> Fruit's Match</h2>
+    <div class="menu-item">
+      <h3>🍯 Honey Yogurt Swirl    </h3>
+      <p>Ingredients: Greek yogurt, honey, vanilla essence    </p>
+      <p>Vibe: “Creamy Bliss” - smooth, slightly tangy, and naturally sweet. A dreamy classic that pairs with every fruit.    </p>
+    </div>
+    <div class="menu-item">
+        <h3>🍫  Choco-Date Indulgence        </h3>
+        <p>Ingredients: Pitted dates, unsweetened cocoa, almond milk, pinch of sea salt        </p>
+        <p>Vibe: “Guilt-Free Dessert” - rich, fudgy, and totally clean. Tastes sinful but it’s all good.        </p>
+      </div>
+      <div class="menu-item">
+        <h3>🥥  Coconut Cream Cloud </h3>
+        <p>Ingredients: Coconut cream, maple syrup, lemon zest        </p>
+        <p>Vibe: “Tropical Chill” - fluffy and light with beachy vibes. Perfect with berries, melon, or pineapple.        </p>
+      </div>
+      <div class="menu-item">
+        <h3>🌰  Nutty Caramel Dip        </h3>
+        <p>   Ingredients: Almond butter, maple syrup, cinnamon                   </p>
+        <p>Vibe: “Nutri-Sweet Energy” - sweet, spiced, and protein-packed. Great with bananas, apples, or pears.        </p>
+      </div>
+      <div class="menu-item">
+        <h3>🍋  Mint-Lemon Zing Dip        </h3>
+        <p>Ingredients: Low-fat yogurt, lemon juice, crushed mint, a pinch of pink salt        </p>
+        <p>Vibe: “Zesty Refresher” - cool and bright. Adds a fresh burst to juicy fruits like watermelon or kiwi.     </p>
+      </div>
+     
+      
+  </section>
+  
+
+  <section id="plans">
+    <h2>Pick your Plan. Pay your way.</h2>
+    <div class="menu-item">
+      <h3>✨ Glow Mini (One Day)</h3>
+      <p>Includes 1 mini fruit bowl | ₹69/day</p>
+    </div>
+    <div class="menu-item">
+        <h3>✨ Glow Combo (One Day)</h3>
+        <p>Includes 1 mini fruit bowl + 1 fresh juice or detox water| ₹99/day</p>
+      </div>
+   
+    <div class="menu-item">
+      <h3>✨ Trail Bowl (One Day)</h3>
+      <p>Includes 1 fruit bowl  | ₹99/day</p>
+    </div>
+    <div class="menu-item">
+        <h3>✨ Trail Boost (One Day)</h3>
+        <p>Includes 1 fruit bowl + 1 fresh juice or detox water  | ₹149/day</p>
+      </div>
+
+    <div class="menu-item">
+        <h3>✨ Glow Streak (Mon-Sat)</h3>
+        <p>Includes 1 mini fruit bowl  | ₹399/week </p>
+        </div>
+    <div class="menu-item">
+        <h3>✨ Glow Plus (Mon-Sat)</h3>
+        <p>Includes 1 mini fruit bowl + 1 fresh juice or detox water daily | ₹559/week</p>
+      </div>
+      <div class="menu-item">
+        <h3>✨ Fruit Flow (Mon-Sat)</h3>
+        <p>Includes 1 fruit bowl  | ₹559/week</p>
+      </div>
+      <div class="menu-item">
+        <h3>✨ Juicy Glow  (Mon-Sat)</h3>
+        <p>Includes 1 fruit bowl + 1 fresh juice or detox water daily | ₹799/week</p>
+      </div>
+      <div class="menu-item">
+        <h3>✨ Glow Lite (Mon-Sat)</h3>
+        <p>Includes 1 mini fruit bowl  | ₹1599/month </p>
+        </div>
+    <div class="menu-item">
+        <h3>✨ Glow Boost (Mon-Sat)</h3>
+        <p>Includes 1 mini fruit bowl + 1 fresh juice or detox water daily | ₹2399/month</p>
+      </div>
+      <div class="menu-item">
+        <h3>✨ Fruit Flush (Mon-Sat)</h3>
+        <p>Includes 1 fruit bowl  | ₹2399/month</p>
+      </div>
+      <div class="menu-item">
+        <h3>✨ Glow Max (Mon-Sat)</h3>
+        <p>Includes 1 fruit bowl + 1 fresh juice or detox water daily | ₹3199/month</p>
+      </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Chinnu | 📞 9246482346 </p>
+    <a href="https://wa.me/919246482346?text=Hi%20Chinnu!%20I'm%20interested%20in%20ordering%20from%20The%20Fresh%20Fruit%20Bowl!" target="_blank">
+      <button class="whatsapp-button">Order on WhatsApp</button>
+    </a>
+    <div class="qr-code">
+      <p>Scan the QR to chat and order us through WhatsApp</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://wa.me/919246482346&size=150x150" alt="QR Code to Menu" />
+    </div>
+  </section>
+  
+  <footer>
+    &copy; 2025 The Fresh Fruit Bowl. All rights reserved.
+  </footer>
+</body>
+</html>
